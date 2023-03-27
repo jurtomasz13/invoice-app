@@ -1,8 +1,8 @@
 import "../styles/globals.css";
 
 export const metadata = {
-  title: "Invoices",
   description: "Manage invoices",
+  title: "Invoices",
 };
 
 export default function RootLayout({
