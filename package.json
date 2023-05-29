@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "npm": "8.19.3",
     "node": "18.12.1"
   },
   "scripts": {
@@ -21,10 +20,10 @@
     "@types/react": "18.0.29",
     "@types/react-dom": "18.0.11",
     "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "eslint-config-next": "^13.4.4",
+    "next": "^13.4.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "5.0.2"
   },
   "devDependencies": {
