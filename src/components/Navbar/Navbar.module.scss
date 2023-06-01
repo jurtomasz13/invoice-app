@@ -17,8 +17,11 @@ $d-navbar-width: 103px;
 $mt-item-margin: 1.5rem 2rem;
 $d-item-margin: 2rem;
 
+.navbar-offset {
+  height: $m-navbar-height;
+}
 
-.container {
+.navbar {
   position: fixed; 
   display: flex;
   width: 100%;
@@ -84,7 +87,11 @@ $d-item-margin: 2rem;
 }
 
 @media (min-width: $tablet-min) {
-  .container {
+  .navbar-offset {
+    height: $t-navbar-height;
+  }
+
+  .navbar {
     height: $t-navbar-height;
 
     .item {
@@ -102,7 +109,11 @@ $d-item-margin: 2rem;
 }
 
 @media (min-width: $desktop-min) {
-  .container {
+  .navbar-offset {
+    display: none;
+  }
+
+  .navbar {
     flex-direction: column;
     width: $d-navbar-width;
     height: 100%;

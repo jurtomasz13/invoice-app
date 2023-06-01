@@ -1,3 +1,5 @@
+@use "./colors.scss" as *;
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,8 +12,13 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+html[data-theme="light"] {
+  color: black;
+}
+
+html[data-theme="dark"] {
+  background-color: $theme-12;
+  color: white;
 }
 
 a {

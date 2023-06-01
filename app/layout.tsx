@@ -1,8 +1,10 @@
-import "@/styles/globals.css";
+import "@/styles/globals.scss";
 
 import { League_Spartan } from "next/font/google";
 
 import Sidebar from "@/components/Navbar/Navbar";
+import { ThemeContextProvider } from "@/contexts/ThemeContext";
+import { getCookie } from "@/utils/server/cookies";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -19,11 +21,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const theme = getCookie("theme");
+
   return (
-    <html lang="en" className={leagueSpartan.className}>
-      <body>
-        <Sidebar />
-        {children}
+    <html lang="en" data-theme={theme?.value}>
+      <body className={leagueSpartan.className}>
+        <ThemeContextProvider theme={theme?.value}>
+          <Sidebar />
+          {children}
+        </ThemeContextProvider>
       </body>
     </html>
   );
