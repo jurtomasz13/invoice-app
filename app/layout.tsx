@@ -1,4 +1,6 @@
-import "../styles/globals.css";
+import "@/styles/globals.css";
+
+import Sidebar from "@/components/Navbar/Navbar";
 
 export const metadata = {
   description: "Manage invoices",
@@ -12,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Sidebar />
+        {children}
+      </body>
     </html>
   );
 }

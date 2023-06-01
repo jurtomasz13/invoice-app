@@ -1,0 +1,138 @@
+@use "@/styles/colors" as *;
+@use "@/styles/breakpoints" as *;
+
+// Logo
+$m-logo-icon-size: 28px;
+$t-logo-icon-size: 32px;
+$d-logo-icon-size: 40px;
+
+// Profile image
+$mt-profile-img-size: 32px;
+$d-profile-img-size: 40px;
+
+// Navbar elements
+$m-navbar-height: 72px;
+$t-navbar-height: 80px;
+$d-navbar-width: 103px;
+$mt-item-margin: 1.5rem 2rem;
+$d-item-margin: 2rem;
+
+
+.container {
+  position: fixed; 
+  display: flex;
+  width: 100%;
+  height: $m-navbar-height;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #373b53;
+
+  & > *:first-child {
+    margin-right: auto;
+  }
+
+  .item {
+    display: flex;
+    width: $m-navbar-height;
+    height: $m-navbar-height;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .line {
+    border: none;
+    height: $m-navbar-height;
+    width: 1px;
+    background-color: #494E6E;
+  }
+
+  .logo-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: $theme-1;
+    border-radius: 0 20px 20px 0;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      background-color: $theme-2;
+      border-radius: 20px 0 20px 0;
+    }
+
+    .logo-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: $m-logo-icon-size;
+      height: $m-logo-icon-size;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .profile-img {
+    width: $mt-profile-img-size;
+    height: $mt-profile-img-size;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: $tablet-min) {
+  .container {
+    height: $t-navbar-height;
+
+    .item {
+      width: $t-navbar-height;
+      height: $t-navbar-height;
+    }
+
+    .logo-wrapper{
+      .logo-icon {
+        width: $t-logo-icon-size;
+        height: $t-logo-icon-size;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-min) {
+  .container {
+    flex-direction: column;
+    width: $d-navbar-width;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+
+    & > *:first-child {
+      margin-bottom: auto;
+    }
+
+    .item {
+      width: $d-navbar-width;
+      height: $d-navbar-width;
+    }
+
+    .line {
+      height: 1px;
+      width: 100%;
+    }
+
+    .logo-wrapper{
+      .logo-icon {
+        width: $d-logo-icon-size;
+        height: $d-logo-icon-size;
+      }
+    } 
+
+    .profile-img {
+      width: $d-profile-img-size;
+      height: $d-profile-img-size;
+    }
+  }
+}
+
