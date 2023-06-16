@@ -29,7 +29,9 @@ export const ThemeContextProvider = ({
 
   useLayoutEffect(() => {
     document.documentElement.setAttribute("data-theme", currentTheme);
-    setCookie("theme", currentTheme);
+    setCookie("theme", currentTheme, {
+      maxAge: new Date("2038-01-01T01:01:01.345").getTime(),
+    });
   }, [currentTheme]);
 
   const toggleTheme = () => {
