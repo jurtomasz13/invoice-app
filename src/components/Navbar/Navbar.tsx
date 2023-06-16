@@ -3,14 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useTheme } from "@/contexts/ThemeContext";
-import moonIcon from "@/public/icon-moon.svg";
 import profilePicture from "@/public/image-avatar.jpg";
 import logoIcon from "@/public/logo.svg";
 
+import MoonIcon from "../Icons/MoonIcon/MoonIcon";
+import SunIcon from "../Icons/SunIcon/SunIcon";
 import styles from "./Navbar.module.scss";
 
 export default function Navbar() {
-  const { toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <>
@@ -25,15 +26,13 @@ export default function Navbar() {
             />
           </Link>
         </div>
-
         <div className={styles.item}>
           <button onClick={toggleTheme}>
-            <Image src={moonIcon} alt="Change theme to dark" />
+            {theme === "light" && <MoonIcon />}
+            {theme === "dark" && <SunIcon />}
           </button>
         </div>
-
         <hr className={styles.line} />
-
         <div className={styles.item}>
           <Image
             src={profilePicture}
