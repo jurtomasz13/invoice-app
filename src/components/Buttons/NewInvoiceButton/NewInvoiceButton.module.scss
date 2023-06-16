@@ -1,0 +1,21 @@
+@use "@/styles/colors.scss" as *;
+
+.button {
+  width: 150px;
+  background-color: $theme-1;
+
+  &:hover {
+    background-color: $theme-2;
+  }
+
+  .plus-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin: 8px;
+    background-color: white;
+    border-radius: 50%;
+  }
+}

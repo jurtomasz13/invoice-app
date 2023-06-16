@@ -1,10 +1,6 @@
 @use "@/styles/colors.scss" as *;
 
 .icon {
-  fill: #7E88C3;
+  fill: $theme-1;
   transition: fill .3 ease;
-
-  &:hover {
-    fill: $theme-5;
-  }
 }

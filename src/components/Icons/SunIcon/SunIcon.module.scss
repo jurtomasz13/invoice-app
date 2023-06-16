@@ -2,9 +2,9 @@
 
 .icon {
   fill: #858BB2;
-  transition: fill 0.3 ease;
-}
+  transition: fill .3 ease;
 
-.icon:hover {
-  fill: $theme-5;
+  &:hover {
+    fill: $theme-5;
+  }
 }

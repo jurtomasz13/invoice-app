@@ -1,0 +1,28 @@
+@use "@/styles/colors.scss" as *;
+
+.button {
+  width: 73px;
+  justify-content: center;
+}
+
+html[data-theme="light"]{
+  .button {
+    background-color: #F9FAFE;
+    color: $theme-7;
+
+    &:hover {
+      background-color: #DFE3FA;
+    }
+  }
+}
+
+html[data-theme="dark"]{
+  .button {
+    background-color: $theme-4;
+
+    &:hover {
+      background-color: #FFFFFF;
+      color: $theme-7;
+    }
+  }
+}

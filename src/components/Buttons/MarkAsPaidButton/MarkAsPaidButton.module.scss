@@ -1,0 +1,11 @@
+@use "@/styles/colors.scss" as *;
+
+.button {
+  width: 131px;
+  justify-content: center;
+  background-color: $theme-1;
+
+  &:hover {
+    background-color: $theme-2;
+  }
+}

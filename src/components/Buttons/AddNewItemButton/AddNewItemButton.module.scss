@@ -1,0 +1,12 @@
+@use "@/styles/colors.scss" as *;
+
+.button {
+  width: 350px;
+  justify-content: center;
+  background-color: #F9FAFE;
+  color: $theme-7;
+
+  &:hover  {
+    background-color: #DFE3FA;
+  }
+}

@@ -24,8 +24,8 @@ export default function RootLayout({
   const theme = getCookie("theme");
 
   return (
-    <html lang="en" data-theme={theme}>
-      <body className={leagueSpartan.className}>
+    <html lang="en" className={leagueSpartan.className} data-theme={theme}>
+      <body>
         <ThemeContextProvider theme={theme}>
           <Sidebar />
           {children}
